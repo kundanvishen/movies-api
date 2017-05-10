@@ -1,5 +1,5 @@
-## Simple REST API demonstration
-# using Node, Express, Mongoose and Jasmine.
+# Simple REST API demonstration
+## using Node, Express, Mongoose and Jasmine.
 
 How To Run:
 1. Make sure Mongo service is up and running
