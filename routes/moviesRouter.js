@@ -8,7 +8,7 @@ moviesRouter.route('') // movies
     .post(moviesController.add);
 
 moviesRouter.route('/:id') //movies/:id
-    .get(moviesController.getById);
-
+    .get(moviesController.getById)
+    .put(moviesController.update);
 
 module.exports = moviesRouter;
