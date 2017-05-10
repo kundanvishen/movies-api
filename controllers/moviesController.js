@@ -24,11 +24,23 @@ var add = function(req, res) {
             res.status(201);
             res.send(movie);
         }
-    })
+    });
 };
 
+var getById = function(req, res) {
+    Movie.findById(req.params.id, function(err, movie) {
+        if (err) {
+            res.staus(404);
+            res.send("Not found");
+        } else {
+            res.status(200);
+            res.send(movie);
+        }
+    });
+};
 
 module.exports = {
     add: add,
-    get: get
-}
+    get: get,
+    getById: getById
+};
