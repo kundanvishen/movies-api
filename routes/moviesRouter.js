@@ -9,6 +9,7 @@ moviesRouter.route('') // movies
 
 moviesRouter.route('/:id') //movies/:id
     .get(moviesController.getById)
-    .put(moviesController.update);
+    .put(moviesController.update)
+    .patch(moviesController.patch);
 
 module.exports = moviesRouter;

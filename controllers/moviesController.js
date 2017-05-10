@@ -61,9 +61,33 @@ var update = function(req, res) {
     });
 };
 
+var patch = function(req, res) {
+    Movie.findById(req.params.id, function(err, movie) {
+        if (!err) {
+            if (req.body._id) {
+                delete req.body._id;
+            }
+            for (var p in req.body) {
+                movie[p] = req.body[p];
+            }
+
+            movie.save(function(err) {
+                if (!err) {
+                    res.status(200);
+                    res.send(movie);
+                }
+            });
+        } else {
+            res.status(500);
+            res.send("Failed");
+        }
+    });
+}; // patch()
+
 module.exports = {
     add: add,
     get: get,
     getById: getById,
-    update: update
+    update: update,
+    patch: patch
 };
