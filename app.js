@@ -7,6 +7,8 @@ var db = mongoose.connect("mongodb://localhost/MoviesDb");
 
 var app = express();
 
+app.use(bodyParser.json());
+
 app.listen(3000, function() {
 
 });
