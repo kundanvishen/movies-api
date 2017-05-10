@@ -84,10 +84,30 @@ var patch = function(req, res) {
     });
 }; // patch()
 
+var remove = function(req, res) {
+    Movie.findById(req.body._id, function(err, movie) {
+        if (!err) {
+            movie.remove(function(err) {
+                if (!err) {
+                    res.status(204);
+                    res.send("Removed");
+                } else {
+                    res.status(500);
+                    res.send("Failed!");
+                }
+            });
+        } else {
+            res.status(500);
+            res.send("No data found!");
+        }
+    });
+}; // remove()
+
 module.exports = {
     add: add,
     get: get,
     getById: getById,
     update: update,
-    patch: patch
+    patch: patch,
+    remove: remove
 };

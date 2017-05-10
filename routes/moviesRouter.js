@@ -5,7 +5,8 @@ var moviesRouter = express.Router();
 
 moviesRouter.route('') // movies
     .get(moviesController.get)
-    .post(moviesController.add);
+    .post(moviesController.add)
+    .delete(moviesController.remove);
 
 moviesRouter.route('/:id') //movies/:id
     .get(moviesController.getById)
