@@ -1,31 +1,32 @@
 {
-  "name": "movies-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kundanvishen/movies-api.git"
-  },
-  "keywords": [
-    "movies",
-    "nodejs",
-    "api",
-    "rest",
-    "Mongodb"
-  ],
-  "author": "Kundan Singh",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kundanvishen/movies-api/issues"
-  },
-  "homepage": "https://github.com/kundanvishen/movies-api#readme",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "mongoose": "^4.9.8"
-  }
+    "name": "movies-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/jasmine-node spec"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kundanvishen/movies-api.git"
+    },
+    "keywords": [
+        "movies",
+        "nodejs",
+        "api",
+        "rest",
+        "Mongodb"
+    ],
+    "author": "Kundan Singh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kundanvishen/movies-api/issues"
+    },
+    "homepage": "https://github.com/kundanvishen/movies-api#readme",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "express": "^4.15.2",
+        "jasmine-node": "^1.14.5",
+        "mongoose": "^4.9.8"
+    }
 }
